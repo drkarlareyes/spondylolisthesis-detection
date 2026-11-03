@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 330" width="860" height="330" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="860" height="330" rx="14" fill="#ffffff"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/>
+    </marker>
+  </defs>
+
+  <!-- Vertebrae schematic (anterior to the left, posterior to the right) -->
+  <text x="150" y="30" font-size="15" font-weight="bold" fill="#111827" text-anchor="middle">Corner landmarks and slip</text>
+  <g stroke="#1f2937" stroke-width="1.6" fill="#e5e7eb">
+    <polygon points="78,48 192,44 196,92 82,98"/>
+    <polygon points="70,110 186,106 190,156 74,162"/>
+    <polygon points="44,174 162,168 166,220 48,226"/>
+    <polygon points="90,240 210,236 206,288 100,296"/>
+  </g>
+  <g font-size="12" fill="#374151">
+    <text x="18" y="78">L3</text><text x="18" y="140">L4</text><text x="14" y="204">L5</text><text x="52" y="272">S1</text>
+  </g>
+  <g fill="#dc2626">
+    <circle cx="78" cy="48" r="4"/><circle cx="192" cy="44" r="4"/><circle cx="196" cy="92" r="4"/><circle cx="82" cy="98" r="4"/>
+    <circle cx="70" cy="110" r="4"/><circle cx="186" cy="106" r="4"/><circle cx="190" cy="156" r="4"/><circle cx="74" cy="162" r="4"/>
+    <circle cx="44" cy="174" r="4"/><circle cx="162" cy="168" r="4"/><circle cx="166" cy="220" r="4"/><circle cx="48" cy="226" r="4"/>
+    <circle cx="90" cy="240" r="4"/><circle cx="210" cy="236" r="4"/><circle cx="206" cy="288" r="4"/><circle cx="100" cy="296" r="4"/>
+  </g>
+  <!-- posterior border of L5 extended to the S1 endplate -->
+  <line x1="162" y1="168" x2="168" y2="242" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="5,4"/>
+  <line x1="168" y1="238" x2="210" y2="236" stroke="#2563eb" stroke-width="3"/>
+  <text x="222" y="232" font-size="12" fill="#2563eb">slip</text>
+  <line x1="92" y1="306" x2="208" y2="300" stroke="#6b7280" stroke-width="1.2" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text x="150" y="322" font-size="11" fill="#4b5563" text-anchor="middle">endplate width</text>
+
+  <!-- Pipeline -->
+  <text x="590" y="30" font-size="15" font-weight="bold" fill="#111827" text-anchor="middle">Pipeline</text>
+  <g font-size="13" fill="#111827" text-anchor="middle">
+    <rect x="370" y="46" width="440" height="40" rx="8" fill="#eff6ff" stroke="#93c5fd"/>
+    <text x="590" y="71">Lateral lumbar spine radiograph</text>
+    <rect x="370" y="104" width="440" height="40" rx="8" fill="#eff6ff" stroke="#93c5fd"/>
+    <text x="590" y="129">Keypoint R-CNN (ResNet-50 FPN): box + 4 corners per vertebra</text>
+    <rect x="370" y="162" width="440" height="40" rx="8" fill="#eff6ff" stroke="#93c5fd"/>
+    <text x="590" y="187">Order vertebrae and extend the posterior border</text>
+    <rect x="370" y="220" width="440" height="40" rx="8" fill="#eff6ff" stroke="#93c5fd"/>
+    <text x="590" y="245">Slip % = slip / endplate width of the vertebra below</text>
+    <rect x="370" y="278" width="440" height="40" rx="8" fill="#fef3c7" stroke="#f59e0b"/>
+    <text x="590" y="303">Meyerding grade for each level</text>
+  </g>
+  <g stroke="#4b5563" stroke-width="1.6" marker-end="url(#arr)">
+    <line x1="590" y1="86" x2="590" y2="102"/>
+    <line x1="590" y1="144" x2="590" y2="160"/>
+    <line x1="590" y1="202" x2="590" y2="218"/>
+    <line x1="590" y1="260" x2="590" y2="276"/>
+  </g>
+</svg>
